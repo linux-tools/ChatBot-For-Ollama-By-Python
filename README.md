@@ -30,6 +30,7 @@
 作为Ollama前端客户端，您可以从菜单栏中选择操作并执行。如图：
 ![alt text](image-1.png)
 ![alt text](image.png)
+
 下载界面会弹出ollama模型搜索官网
 
 ## 参与贡献
