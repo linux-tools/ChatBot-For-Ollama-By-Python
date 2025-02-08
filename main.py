@@ -114,7 +114,7 @@ def send_msg_to_ai(): #调用Ollama的接口
     global context
     if not is_run_ollama():
         msg_for_not_run_ollama = QMessageBox()
-        QMessageBox.critical(msg_for_not_run_ollama,"警告","ollama未运行")
+        QMessageBox.critical(msg_for_not_run_ollama,"警告","当前Ollama未运行")
     if bot == "": #此处警告
         msg_for_not_choose_llm = QMessageBox()
         choose_button = QMessageBox.critical(msg_for_not_choose_llm, "警告", "你尚未选择可用的大语言模型，请选择大语言模型使用",QMessageBox.StandardButton.Ok, QMessageBox.StandardButton.No)
