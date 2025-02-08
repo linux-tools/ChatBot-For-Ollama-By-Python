@@ -1,0 +1,6 @@
+langchain>=0.1.20
+langchain-ollama
+langchain_core
+pyside6
+nuitka
+psutil
