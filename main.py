@@ -247,7 +247,7 @@ if __name__ == '__main__':
         main_win.actionExit.triggered.connect(main_win.close) #退出程序
         main_win.actionDownload_LLMs.triggered.connect(ollama_llms_download) #下载大语言模型
         main_win.actionCheck_Ollama_Version.triggered.connect(ollama_version) #查看Ollama版本
-        main_win.actionRemove_LLMs.triggered.connect(ollama_rm_llms) #移除大预言模型
+        main_win.actionRemove_LLMs.triggered.connect(ollama_rm_llms) #移除大语言模型
         main_win.pushButton.clicked.connect(send_msg_to_ai) #跳转到对ai发送信息的函数
         app.exec()
     else: #否则不进入
