@@ -13,7 +13,7 @@
 
 ## 安装教程
 
-1、从源代码打包成exe（使用nuitka）：
+从源代码打包成exe（使用nuitka）：
 方式一：（不推荐）
     下载源码后解压，执行make.ps1的powershell脚本文件，执行完毕后从生成的output目录中就能找到生成的二进制文件啦！执行前请确认pip镜像速度稳定，构建过程中将会自动下载大量依赖，或者执行install-dependencies.ps1下载安装依赖
 
@@ -29,7 +29,7 @@
     nuitka
     psutil
 
-2、从Release下载打包好的二进制文件，直接运行即可
+2、从Release下载打包好的二进制文件，直接运行即可（gitee限制，现暂不支持）
 
 ## 使用说明
 
