@@ -1,8 +1,7 @@
 import sys #调用系统相关的库
-import subprocess #调用系统相关的库
 import os #调用系统相关的库
 import psutil #调用系统相关的库
-import re
+import re #调用系统相关的库
 
 from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QMessageBox #引用Pyside6相关的Qt库
 from PySide6.QtWebEngineWidgets import QWebEngineView #引用Pyside6相关的Qt库
@@ -180,9 +179,9 @@ def ollama_llms_download(): #下载大语言模型
         target = search.lineEdit.text()
         llms_pattern = r'.+:+[^a-z^A-Z]+[b]?$'
         if re.match(llms_pattern,target):
-            os.system(f'start cmd.exe /K "ollama pull {target} && exit"')
             msg_finish = QMessageBox()
-            QMessageBox.information(msg_finish,"信息",f"{target}开始下载，请不要关闭命令提示符窗口，待下载完成后，会自动关闭窗口，如果只闪现一下，请检查下载模型名称是否正确或是否已下载")
+            QMessageBox.information(msg_finish, "信息",f"{target}将开始下载，请不要关闭命令提示符窗口，待下载完成后，会自动关闭窗口，如果只闪现一下，请检查下载模型名称是否正确或是否已下载")
+            os.popen(f'start cmd.exe /K "ollama pull {target} && exit"')
             search.lineEdit.clear()
         else:
             msg_llms_name_invalid = QMessageBox()
