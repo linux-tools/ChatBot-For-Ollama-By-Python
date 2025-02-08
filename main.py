@@ -237,7 +237,7 @@ if __name__ == '__main__':
             check = QMessageBox.question(msg_run,"提问","是否打开Ollama",QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if check == QMessageBox.StandardButton.Yes:
                 cmd = r'"C:\\Users\\%username%\\AppData\\Local\\Programs\\Ollama\\ollama app.exe"'
-                subprocess.Popen(cmd)
+                os.popen(cmd)
         main_win = Application()
         main_win.show() #展示窗口
         main_win.actionCurrent_LLM.triggered.connect(check_current_llm) #查看当前模型
