@@ -29,7 +29,7 @@
     nuitka
     psutil
 
-2、从Release下载打包好的二进制文件，直接运行即可（gitee限制，现暂不支持 :triumph: ）
+2、从Release下载打包好的二进制文件，直接运行即可（现目前该账号gitee对发布文件大小限制，现暂不支持 :triumph:,只有从github上Release才支持二进制打包发布，若有一天发布的文件超出限制，则停止对gitee上的更新，Github地址:https://github.com/linux-tools/ChatBot-For-Ollama-By-Python）
 
 ## 使用说明
 
