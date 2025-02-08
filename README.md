@@ -2,7 +2,7 @@
 
 ![alt text](ChatBot_For_Ollama.ico)
 
-你的人工AI智能助手（较为简便的图形化的Ollama前端客户端，目前支持Windows，但是后续将支持Linux平台）
+你的人工AI智能助手（较为简便的图形化的Ollama前端客户端，目前支持Windows，且要求Ollama必须安装在默认目录，即C盘用户目录“一般Ollama默认安装在C盘上”，但是后续将支持Linux平台）
 
 ## 介绍
 
