@@ -29,7 +29,7 @@
     nuitka
     psutil
 
-2、从Release下载打包好的二进制文件，直接运行即可（gitee限制，现暂不支持）
+2、从Release下载打包好的二进制文件，直接运行即可（gitee限制，现暂不支持 :triumph: ）
 
 ## 使用说明
 
