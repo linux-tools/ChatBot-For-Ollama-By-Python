@@ -34,26 +34,26 @@
 ## 使用说明
 
 * 作为Ollama前端客户端，您可以从菜单栏中选择操作并执行。如图：
-![alt text](.\image/image-1.png)
-![alt text](.\image/image.png)
+![alt text](./image/image-1.png)
+![alt text](./image/image.png)
 
 * 下载界面会弹出ollama模型搜索官网：
-![alt text](.\image/image-2.png)
+![alt text](./image/image-2.png)
 
 您可以在搜索界面搜索大语言模型并下载，注意会提示cmd弹窗，此为调用ollama执行下载程序操作，切不可随意关闭，如果关闭，下载将会终止（但是下载的内容会保存）
 
 * 这是选择大语言模型界面：
-![alt text](.\image/image-3.png)
+![alt text](./image/image-3.png)
 
 * 查看当前使用模型：
-![alt text](.\image/image-4.png)
+![alt text](./image/image-4.png)
 
 * 选择开关Ollama服务：
-![alt text](.\image/image-5.png)
+![alt text](./image/image-5.png)
 
 * 查看Ollama版本：
-![alt text](.\image/image-6_1.png)
-![alt text](.\image/image-6_2.png)
+![alt text](./image/image-6_1.png)
+![alt text](./image/image-6_2.png)
 该功能也可以查看Ollama的运行状态
 
 ## 参与贡献
