@@ -16,17 +16,13 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QDialog, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QTextEdit, QWidget)
+    QPushButton, QSizePolicy, QTextBrowser, QWidget)
 
 class Ui_DialogForRemoveLLMs(object):
     def setupUi(self, DialogForRemoveLLMs):
         if not DialogForRemoveLLMs.objectName():
             DialogForRemoveLLMs.setObjectName(u"DialogForRemoveLLMs")
         DialogForRemoveLLMs.resize(761, 319)
-        self.textEdit = QTextEdit(DialogForRemoveLLMs)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setEnabled(False)
-        self.textEdit.setGeometry(QRect(10, 30, 741, 201))
         self.label = QLabel(DialogForRemoveLLMs)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(10, 10, 81, 16))
@@ -42,6 +38,9 @@ class Ui_DialogForRemoveLLMs(object):
         self.pushButton_2 = QPushButton(DialogForRemoveLLMs)
         self.pushButton_2.setObjectName(u"pushButton_2")
         self.pushButton_2.setGeometry(QRect(100, 290, 75, 24))
+        self.textBrowser = QTextBrowser(DialogForRemoveLLMs)
+        self.textBrowser.setObjectName(u"textBrowser")
+        self.textBrowser.setGeometry(QRect(10, 30, 741, 211))
 
         self.retranslateUi(DialogForRemoveLLMs)
 
@@ -49,7 +48,7 @@ class Ui_DialogForRemoveLLMs(object):
     # setupUi
 
     def retranslateUi(self, DialogForRemoveLLMs):
-        DialogForRemoveLLMs.setWindowTitle(QCoreApplication.translate("DialogForRemoveLLMs", u"移除大语言模型选择界面", None))
+        DialogForRemoveLLMs.setWindowTitle(QCoreApplication.translate("DialogForRemoveLLMs", u"Dialog", None))
         self.label.setText(QCoreApplication.translate("DialogForRemoveLLMs", u"\u5df2\u6709\u7684\u6a21\u578b\uff1a", None))
         self.label_2.setText(QCoreApplication.translate("DialogForRemoveLLMs", u"\u8bf7\u8f93\u5165\u4f60\u60f3\u8981\u5220\u9664\u7684\u5927\u8bed\u8a00\u6a21\u578b\uff1a", None))
         self.pushButton.setText(QCoreApplication.translate("DialogForRemoveLLMs", u"\u786e\u5b9a", None))
