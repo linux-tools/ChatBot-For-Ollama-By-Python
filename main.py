@@ -126,7 +126,7 @@ def send_msg_to_ai(): #调用Ollama的接口
         user_input = main_win.plainTextEdit.toPlainText()
         result = chain.invoke({"context": context, "question": user_input}) #对话核心代码
         main_win.plainTextEdit.clear()
-        main_win.textBrowser.setText(result)
+        main_win.textBrowser.setMarkdown(result)
         context += f"\nUser:{user_input}\nAI:{result}"
         ###################################################################重要部分
 
@@ -202,14 +202,15 @@ def ollama_rm_llms(): #删除大语言模型
         llms_pattern = r'.+:+[^a-z^A-Z]+[b]?$'
         if re.match(llms_pattern,target): #检查输入是否合法
             check_is_exist = os.popen(f"ollama list {target}").read()  # 检查模型是否存在
-            if check_is_exist == "":
+            check_pattern = r'.+[not found]$'
+            if re.match(check_pattern,check_is_exist):
                 msg_llms_is_not_exist = QMessageBox()
                 QMessageBox.warning(msg_llms_is_not_exist, "警告", f"你不能删除，因为{target}模型不存在")
             else:
+                rm_llm.textBrowser.clear()
                 os.popen(f"ollama rm {target}")
                 information = os.popen("ollama list").read()
-                rm_llm.textEdit.clear()
-                rm_llm.textEdit.setText(information)
+                rm_llm.textBrowser.setText(information)
         else:
             msg_cannot_rm_llms = QMessageBox()
             QMessageBox.warning(msg_cannot_rm_llms,"警告",f"你不能删除，因为{target}名称无效")
@@ -218,7 +219,7 @@ def ollama_rm_llms(): #删除大语言模型
     rm_llm.pushButton.clicked.connect(rm_llms)
     rm_llm.pushButton_2.clicked.connect(rm_llm.close)
     information = os.popen("ollama list").read()
-    rm_llm.textEdit.setText(information)
+    rm_llm.textBrowser.setText(information)
     rm_llm.show()
     rm_llm.exec()
 
